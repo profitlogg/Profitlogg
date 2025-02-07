@@ -32,7 +32,7 @@
 
     <!-- Content Sections -->
     <!-- Welcome Section -->
-<section id="welcome" class="welcome-section">
+<section id="home" class="welcome-section">
     <div class="welcome-content">
         <h1>Welcome to ProfitLog</h1>
         <p>Your automated trade journal for better insights.</p>
@@ -90,10 +90,28 @@
 </section>
 
 
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Choose a plan that suits you.</p>
-    </section>
+    <<section id="pricing" class="pricing-section">
+    <h2>Choose Your Plan</h2>
+    <div class="toggle-container">
+        <span>Monthly</span>
+        <label class="switch">
+            <input type="checkbox" id="pricing-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Yearly</span>
+    </div>
+    <div class="pricing-container">
+        <div class="pricing-box">
+            <h3>Basic Plan</h3>
+            <p class="price"><span id="basic-price">₹499</span> / month</p>
+        </div>
+        <div class="pricing-box">
+            <h3>Premium Plan</h3>
+            <p class="price"><span id="premium-price">₹999</span> / month</p>
+        </div>
+    </div>
+</section>
+
 
     <script src="scripts.js"></script>
 </body>

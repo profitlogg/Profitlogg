@@ -56,3 +56,18 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealFeatures);
     revealFeatures(); // Run on page load in case features are already in view
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.getElementById("pricing-toggle");
+    const basicPrice = document.getElementById("basic-price");
+    const premiumPrice = document.getElementById("premium-price");
+
+    toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+            basicPrice.textContent = "₹4999";
+            premiumPrice.textContent = "₹9999";
+        } else {
+            basicPrice.textContent = "₹499";
+            premiumPrice.textContent = "₹999";
+        }
+    });
+});
