@@ -71,3 +71,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+
+    fetch("https://script.google.com/macros/s/AKfycbwikG2C1xebul4v9eoh7SYcXxdyO9dMm3OFVGlqoCt-MqSZIwVSAAzQ00MpetyiRWAc/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("📩 Response from server:", data);
+        alert(data);  // Show success or error message
+    })
+    .catch(error => {
+        console.error("❌ Error:", error);
+        alert("Error: Could not connect to server.");
+    });
+});
+

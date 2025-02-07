@@ -2,96 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-         /*   background-color: #f4f4f4;  */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background:url('8.jpg') no-repeat center center fixed;
-            background-size:100%;
-        }
-        .signup-container {
-         /*   background-color: #fff;  */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        h2 {
-            text-align: center;
-            color: hsl(0, 12%, 85%);
-        }
-	h4{
-		text-align:center;
-		color:hwb(0 88% 11%);
-	}
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] 
-	{
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        input[type="submit"] 
-	{
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .login-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .login-link a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        .login-link a:hover {
-            text-decoration: underline;
-        }
-	p{
-		color:white;
-	}
-    </style>
+    <title>Signup - ProfitLog</title>
+    <link rel="stylesheet" href="signup.css"> <!-- Link to the signup page styles -->
 </head>
-<body>
-    <div class="signup-container">
-        <h2>Sign Up Account</h2>
-	<h4>Enter Your Data To Create Your Account<h4>
-        <form action="Login.html" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <input type="submit" value="Sign Up">
-        </form>
-        <div class="login-link">
-		<p> Already have an account.?  <a href="Login.html"> Log in </a></p>
+<body id="signup-page">  <!-- ✅ Add this ID to the body tag -->
+
+    <div class="signup-wrapper">
+        <!-- Your Signup Form Content Goes Here -->
+    </div>
+
+</body>
+</html>
+
+        <!-- Left Section - Add a Stunning Visual -->
+        <div class="left-section">
+            <h1>Welcome to ProfitLog</h1>
+            <p>Track. Analyze. Improve. Become a Profitable Trader.</p>
+            <ul>
+                <li>📊 Automated Trade Journals</li>
+                <li>📉 Performance Insights & Analytics</li>
+                <li>🔒 Secure & Encrypted Data Storage</li>
+            </ul>
+        </div>
+
+        <!-- Right Section - Signup Form -->
+        <div class="right-section">
+            <h2>Create Your Account</h2>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="plan">Select Plan:</label>
+                <select id="plan" name="plan">
+                    <option value="499-monthly">₹499 / Month</option>
+                    <option value="999-monthly">₹999 / Month</option>
+                </select>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <!-- Pricing Boxes Below Form -->
+            <div class="plan-container">
+                <div class="plan-box basic">
+                    <h3>Basic Plan</h3>
+                    <p>₹499 / Month</p>
+                    <ul>
+                        <li>✔ Automated Journals</li>
+                        <li>✔ Basic Analytics</li>
+                        <li>✔ Email Support</li>
+                    </ul>
+                </div>
+                <div class="plan-box premium">
+                    <h3>Premium Plan</h3>
+                    <p>₹999 / Month</p>
+                    <ul>
+                        <li>✔ Everything in Basic</li>
+                        <li>✔ Advanced Analytics</li>
+                        <li>✔ 24/7 Priority Support</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
